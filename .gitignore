@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 /dist
-
+src/firebase/index.js
+.prettierignore
 
 # local env files
 .env.local

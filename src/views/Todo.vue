@@ -112,7 +112,6 @@ export default {
                     localStorage.removeItem("isLogIn");
                     localStorage.removeItem("uid");
                     this.$router.push("/");
-                    alert("登出成功，歡迎再次登入！");
                 })
                 .catch((error) => {
                     alert("登出失敗，請再次嘗試！");
@@ -226,7 +225,6 @@ export default {
             background-color: #3cb37140;
 
             .label {
-                // color: #0007;
                 text-decoration: line-through;
             }
         }

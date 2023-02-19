@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "@/firebase/auth";
 const provider = new GoogleAuthProvider();
 
@@ -66,7 +66,6 @@ export default {
             border: none;
             border-radius: 1rem;
             padding: 1rem;
-            // background-color: #fff;
             box-shadow: 0 0 10px #0004;
             display: block;
             margin: auto;

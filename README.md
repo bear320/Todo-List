@@ -1,5 +1,10 @@
 # Todo-list
 
+## Description
+* 使用 vue-cli 開發 (Vue 3)
+* Tags: ```Auth (Firebase)```, ```Realtime Database (Firebase)```, ```Hosting (Firebase)```
+* [網站連結](https://todolist-2395c.web.app/)
+
 ## Project setup
 ```
 npm install

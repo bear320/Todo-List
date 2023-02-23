@@ -25,14 +25,23 @@ export default {
     computed: {},
     methods: {
         googleLogin() {
+            // 使用 signInWithPopup() 跳出登入彈窗
+            // 第一個參數： firebase auth 實例
+            // 第二個參數： google 登入提供者
+            // 登入成功，執行 then 區塊；登入失敗，則執行 catch 區塊
             signInWithPopup(auth, provider)
                 .then((result) => {
+                    // 使用 GoogleAuthProvider.credentialFromResult() 獲取使用者認證和存取權杖
                     const credential = GoogleAuthProvider.credentialFromResult(result);
                     const token = credential.accessToken;
                     const user = result.user;
+
+                    // 將 user 和 uid 分別賦值給 this.user 和 this. uid
                     this.user = result.user;
                     this.uid = result.user.uid;
+                    // 使用 $router.push 將使用者重新導向 /todo 路由
                     this.$router.push("/todo");
+                    // 將 localStorage 中的 isLogIn 和 uid 分別設定為 true 和當前用戶之 uid
                     localStorage.setItem("isLogIn", "true");
                     localStorage.setItem("uid", `${result.user.uid}`);
                 })
